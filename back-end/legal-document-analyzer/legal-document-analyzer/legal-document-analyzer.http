@@ -1,0 +1,6 @@
+@legal_document_analyzer_HostAddress = http://localhost:5243
+
+GET {{legal_document_analyzer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

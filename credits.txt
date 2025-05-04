@@ -1,0 +1,5 @@
+Implemented by Adia Romanescu, partially using AI.
+
+UI/UX Figma model: https://www.figma.com/design/4fmU59q7ePnNqSHQyjOXA8/Blondie%5C%5C?node-id=0-1&t=jWuGVcejEqh6KskF-1
+
+Credits for some of the legal documents used to: The Atticus Project, an Open-Source Dataset of Legal Contracts for AI.
