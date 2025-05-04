@@ -1,0 +1,147 @@
+/* Base layout */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  text-align: center;
+  padding-left: 80px; /* leave room for collapsed menu */
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+/* Expanded menu adjustment (optional) */
+body .menu.expanded ~ main .home-container {
+  padding-left: 220px; /* match expanded menu */
+}
+
+/* Text styling */
+.branding h1 {
+  font-size: 5rem;
+  color: #e91e63;
+  margin-bottom: 0.5rem;
+}
+
+.branding h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.branding p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+}
+
+.tagline {
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+/* CTA */
+.cta-button {
+  display: inline-block;
+  background-color: #e91e63;
+  color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d81b60;
+}
+
+/* Light mode overrides */
+body.light-mode .cta-button {
+  background-color: #d81b60;
+}
+
+body.light-mode .cta-button:hover {
+  background-color: #c2185b;
+}
+
+body.light-mode .tagline {
+  color: #666;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 1024px) {
+  .home-container {
+    padding-left: 70px;
+    padding-right: 1.5rem;
+  }
+
+  .branding h1 {
+    font-size: 4rem;
+  }
+
+  .branding h2 {
+    font-size: 2rem;
+  }
+
+  .branding p {
+    font-size: 1.7rem;
+  }
+
+  .cta-button {
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding-left: 60px;
+    padding-right: 1rem;
+  }
+
+  .branding h1 {
+    font-size: 3rem;
+  }
+
+  .branding h2 {
+    font-size: 1.6rem;
+  }
+
+  .branding p {
+    font-size: 1.4rem;
+  }
+
+  .cta-button {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .branding h1 {
+    font-size: 2.2rem;
+  }
+
+  .branding h2 {
+    font-size: 1.3rem;
+  }
+
+  .branding p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+}

@@ -1,0 +1,55 @@
+<div class="register-container">
+  <div class="branding">
+    <h1>Login</h1>
+    <h2>Sign in to your account to start using Blondie</h2>
+  </div>
+
+  <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" class="register-form">
+    <!-- Username Field -->
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="user.username"
+        required
+        #username="ngModel"
+        class="form-control"
+      />
+      <div *ngIf="username.invalid && username.touched" class="error">
+        Username is required.
+      </div>
+    </div>
+
+
+    <!-- Password Field with Custom Password Validation -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="user.password"
+        required
+        [pattern]="passwordPattern"
+        #password="ngModel"
+        class="form-control"
+      />
+      <div *ngIf="password.invalid && password.touched" class="error">
+        Password must be at least 8 characters long, and include one uppercase letter, one number, and one special character.
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="cta-button" [disabled]="loginForm.invalid">
+      Log in
+    </button>
+
+    <!-- Error Message Display -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+  <p class="redirect-text">
+    Don't have an account? <a routerLink="/register">Sign up here</a>.
+  </p>
+</div>

@@ -1,0 +1,49 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container for routed content */
+main {
+  margin-left: 60px;
+  padding: 1rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+/* Adjust main layout when menu is expanded */
+.menu.expanded ~ main {
+  margin-left: 200px;
+}
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+body.light-mode .menu {
+  background-color: #ffe3f1;
+  color: #000;
+}
+
+body.light-mode .menu .sign-out {
+  color: #333;
+}
+body.light-mode .branding h1,
+body.light-mode .branding h2 {
+  color: black !important;
+}

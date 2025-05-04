@@ -1,0 +1,52 @@
+<div class="menu" [class.expanded]="isExpanded">
+  <button class="toggle-btn" (click)="toggleMenu()">
+    <span *ngIf="!isExpanded">&#9776;</span>
+    <span *ngIf="isExpanded">×</span>
+  </button>
+
+  <div class="menu-content">
+    <div class="logo">\\ <span *ngIf="isExpanded">Blondie \\</span></div>
+    <ul>
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="icon">🏠</i>
+          <span *ngIf="isExpanded">home</span>
+        </a>
+      </li>
+
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/analyzer" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="icon">📄</i>
+          <span *ngIf="isExpanded">analyzer tool</span>
+        </a>
+      </li>
+
+      <li *ngIf="isLoggedIn">
+        <i class="icon">📁</i>
+        <span *ngIf="isExpanded">my folders</span>
+      </li>
+
+      <li *ngIf="isLoggedIn">
+        <i class="icon">🤖</i>
+        <span *ngIf="isExpanded">AI legal chatbot</span>
+      </li>
+
+      <li (click)="toggleTheme()">
+        <i class="icon">🌓</i>
+        <span *ngIf="isExpanded">toggle theme</span>
+      </li>
+    </ul>
+
+    <!-- Show sign out only if logged in -->
+    <div *ngIf="isLoggedIn" class="sign-out" (click)="logout()">
+      <i class="icon">❌</i>
+      <span *ngIf="isExpanded">sign out</span>
+    </div>
+
+    <!-- Show login if NOT logged in -->
+    <div *ngIf="!isLoggedIn" class="sign-out" (click)="router.navigate(['/login'])">
+      <i class="icon">🔐</i>
+      <span *ngIf="isExpanded">log in</span>
+    </div>
+  </div>
+</div>

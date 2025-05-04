@@ -1,0 +1,28 @@
+.upload-container {
+  text-align: center;
+  padding: 2rem;
+  border: 2px dashed #888;
+  border-radius: 1rem;
+  background-color: #1e1e1e;
+}
+
+.upload-box {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #f5b3d3;
+  color: #000;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.upload-box:hover {
+  background-color: #ff90c2;
+}
+
+.upload-instruction {
+  margin-top: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
