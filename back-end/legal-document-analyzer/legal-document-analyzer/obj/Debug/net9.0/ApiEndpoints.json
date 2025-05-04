@@ -1,0 +1,82 @@
+[
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.LegalDocumentsController",
+    "Method": "UploadDocument",
+    "RelativePath": "api/LegalDocuments/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "legal_document_analyzer.Application.DTOs.UserLoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenRequest",
+        "Type": "legal_document_analyzer.Domain.ValueObjects.TokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenRequest",
+        "Type": "legal_document_analyzer.Domain.ValueObjects.TokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "legal_document_analyzer.Application.DTOs.UserRegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
