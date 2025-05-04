@@ -1,6 +1,6 @@
 # Project Overview
 
-This project was implemented by **Adia Romanescu**, with certain components partially developed using AI tools.
+This project was implemented by **Adia Romanescu** and **Alex Neagu**, with certain components partially developed using AI tools.
 
 ## Design
 
@@ -14,7 +14,7 @@ Credits for some of the legal documents utilized in this project go to **The Att
 
 ## Acknowledgments
 
-- **Adia Romanescu** - Project implementation
+- **Adia Romanescu**, **Alex Neagu** - Project implementation
 - **The Atticus Project** - Contribution of legal documents
 - **AI Tools** - Partial assistance in development
 
