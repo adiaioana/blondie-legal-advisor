@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "yLxHFdQisY2YRhEqES+5qJcfbySEd3YSRBL5InNOGFg=",
+  "Source": "legal-document-analyzer",
+  "BasePath": "_content/legal-document-analyzer",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
