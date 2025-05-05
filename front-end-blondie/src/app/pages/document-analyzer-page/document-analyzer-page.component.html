@@ -1,7 +1,19 @@
-<div class="upload-container">
-  <label for="file-upload" class="upload-box">
-    <span class="button-label">Choose a file</span>
+<div class="branding">
+  <div class="upload-container">
+    <label for="file-upload" class="upload-box">
+      <span class="button-label">Choose a file</span>
     <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="application/pdf" hidden />
   </label>
   <p class="upload-instruction">or drag and drop the file here to read PDF documents</p>
+  </div>
+  <div class="content-container">
+    <div class="field-container">
+      <h2>Document Clauses</h2>
+      <textarea class="field" readonly>{{ clauses }}</textarea>
+    </div>
+    <div class="field-container">
+      <h2>Document Summary</h2>
+      <textarea class="field" readonly>{{ summary }}</textarea>
+    </div>
+  </div>
 </div>
