@@ -28,14 +28,15 @@ namespace legal_document_analyzer.Application.Services
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserId.ToString()), // User ID as sub
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()), // User ID
-                new Claim(ClaimTypes.Name, user.Username) // Username
+                new Claim(ClaimTypes.Name, user.Username), // Username,
+                new Claim(ClaimTypes.Email, user.Email) // Email
             };
 
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(30),
+                expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

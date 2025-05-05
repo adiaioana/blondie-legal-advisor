@@ -295,10 +295,10 @@ D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-an
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.legal-document-analyzer.props
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.legal-document-analyzer.props
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\staticwebassets.pack.json
-D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\legal-do.CE2C38D4.Up2Date
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\legal-document-analyzer.dll
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\refint\legal-document-analyzer.dll
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\legal-document-analyzer.pdb
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\legal-document-analyzer.genruntimeconfig.cache
 D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\ref\legal-document-analyzer.dll
+D:\FII\dotNet\proiect-blondie\back-end\legal-document-analyzer\legal-document-analyzer\obj\Debug\net9.0\legal-document-analyzer.sourcelink.json
