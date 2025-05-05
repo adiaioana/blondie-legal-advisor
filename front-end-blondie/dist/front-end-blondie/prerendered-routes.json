@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/": {},
+    "/analyzer": {},
+    "/login": {},
+    "/my-account": {},
+    "/register": {}
+  }
+}
