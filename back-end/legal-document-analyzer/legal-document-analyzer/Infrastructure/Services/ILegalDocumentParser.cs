@@ -5,7 +5,7 @@ namespace legal_document_analyzer.Infrastructure.Services
 {
     public interface ILegalDocumentParser
     {
-        IEnumerable<Clause> ParseClauses(string content, Guid documentId);
+        Task<IEnumerable<Clause>> ParseClauses(string content, Guid documentId);
         Task<DocumentSummary> GenerateSummary(string content, Guid documentId);
     }
 }

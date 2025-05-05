@@ -29,11 +29,12 @@ namespace legal_document_analyzer.Presentation.Controllers
 
             if (file.ContentType != "application/pdf")
                 return BadRequest("Only PDF files are allowed.");
-
+            Console.WriteLine("Received file");
             using var memoryStream = new MemoryStream();
             await file.CopyToAsync(memoryStream);
             var fileBytes = memoryStream.ToArray();
             var content = ExtractTextFromPdf(fileBytes);
+            Console.WriteLine("Extracted content");
 
             var document = new LegalDocument
             {
