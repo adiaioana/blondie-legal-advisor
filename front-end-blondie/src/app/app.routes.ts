@@ -10,7 +10,7 @@ export const routes: Routes = [
 
   { path: '', component: HomePageComponent },
   { path: 'analyzer', component: DocumentAnalyzerPageComponent,
-    canActivate: [AuthGuard] },
+    /*canActivate: [AuthGuard]*/ },
   {path:'register', component: RegisterPageComponent},
   {path:'login', component: LoginPageComponent},
   {path: 'my-account', component: MyAccountPageComponent,
