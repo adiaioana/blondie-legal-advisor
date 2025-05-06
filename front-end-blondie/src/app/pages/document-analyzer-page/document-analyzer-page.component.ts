@@ -2,10 +2,11 @@ import {Component, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {LegalDocumentsService} from '../../services/file-services/legal-documents.service';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-document-analyzer-page',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './document-analyzer-page.component.html',
   styleUrl: './document-analyzer-page.component.css',
   standalone: true
@@ -13,6 +14,8 @@ import {LegalDocumentsService} from '../../services/file-services/legal-document
 export class DocumentAnalyzerPageComponent {
   clauses: string = '';
   summary: string = '';
+  loading: boolean = false;
+  resultsLoaded: boolean = false;
 
   constructor(private legalDocumentsService: LegalDocumentsService) {
     // Initialize with default values or fetch data dynamically
@@ -29,16 +32,54 @@ export class DocumentAnalyzerPageComponent {
         return;
       }
 
+      this.loading = true;
+      this.resultsLoaded = false;
       this.legalDocumentsService.uploadDocument(file).subscribe({
-        next: (res) => {
-          console.log('Upload successful:', res);
-          // TODO: Show summary or ID
+        next: (response) => {
+          //console.log('Full response:', response);
+          const legalDocumentId = response.legalDocumentId;
+          const fileName = response.fileName;
+          this.clauses = this.convertMarkdownToHtml(response.clauseContents?.join('\n\n') || '');
+          this.summary = this.convertMarkdownToHtml(response.content || '');
+
+
+          console.log('I do not understand');
+          console.log('Clauses:', this.clauses);
+          console.log('Summary:', this.summary);
+          this.loading = false;
+          this.resultsLoaded = true;
         },
         error: (err) => {
-          console.error('Upload failed:', err);
+          console.error('Upload failed', err);
+          this.loading = false;
         }
       });
+
     }
   }
+  convertMarkdownToHtml(markdown: string): string {
+    let html = markdown;
+
+    // Headers
+    html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+    html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+    html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+    // Bold
+    html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
+
+    // Italic
+    html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
+
+    // Unordered list items
+    html = html.replace(/^- (.*$)/gim, '<li>$1</li>');
+    html = html.replace(/(<li>.*<\/li>)/gim, '<ul>$1</ul>');
+
+    // Line breaks
+    html = html.replace(/\n/gim, '<br/>');
+
+    return html.trim();
+  }
+
 
 }

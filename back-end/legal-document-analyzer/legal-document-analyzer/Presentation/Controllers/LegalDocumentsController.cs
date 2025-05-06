@@ -3,6 +3,7 @@ using legal_document_analyzer.Domain.Repositories;
 using legal_document_analyzer.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using UglyToad.PdfPig;
+using static UglyToad.PdfPig.Core.PdfSubpath;
 
 namespace legal_document_analyzer.Presentation.Controllers
 {
@@ -43,7 +44,11 @@ namespace legal_document_analyzer.Presentation.Controllers
                 Content = content,
                 UploadedAt = DateTime.UtcNow
             };
-            await _repository.AddDocumentAsync(document);
+            
+            var (clauses, summary) =await _repository.AddDocumentAsync(document);
+            var clauseContents = new List<string>();
+            foreach (Clause clause in clauses)
+                clauseContents.Add(clause.Text);
             /*
             var clauses = legalDocumentParser.ParseClauses(content, document.LegalDocumentId);
             foreach (var clause in clauses)
@@ -51,7 +56,7 @@ namespace legal_document_analyzer.Presentation.Controllers
             var summary =await legalDocumentParser.GenerateSummary(content, document.LegalDocumentId);
             await documentSummaryRepository.AddSummaryAsync(summary);
             */
-            return Ok(new { document.LegalDocumentId, document.FileName });
+            return Ok(new { document.LegalDocumentId, document.FileName , clauseContents, summary.Content});
         }
 
         // Replace this with a real PDF text extraction

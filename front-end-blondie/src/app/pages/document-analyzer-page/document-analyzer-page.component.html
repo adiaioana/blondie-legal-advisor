@@ -2,18 +2,25 @@
   <div class="upload-container">
     <label for="file-upload" class="upload-box">
       <span class="button-label">Choose a file</span>
-    <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="application/pdf" hidden />
-  </label>
-  <p class="upload-instruction">or drag and drop the file here to read PDF documents</p>
+      <input id="file-upload" type="file" (change)="onFileSelected($event)" accept="application/pdf" hidden />
+    </label>
+    <p class="upload-instruction">or drag and drop the file here to read PDF documents</p>
   </div>
-  <div class="content-container">
+
+  <!-- Loading Indicator -->
+  <div *ngIf="loading" class="loading-message">
+    <p>Processing document... Please wait.</p>
+  </div>
+
+  <!-- Results -->
+  <div class="content-container" *ngIf="resultsLoaded">
     <div class="field-container">
       <h2>Document Clauses</h2>
-      <textarea class="field" readonly>{{ clauses }}</textarea>
+      <div class="field styled-text" [innerHTML]="clauses"></div>
     </div>
     <div class="field-container">
       <h2>Document Summary</h2>
-      <textarea class="field" readonly>{{ summary }}</textarea>
+      <div class="field styled-text" [innerHTML]="summary"></div>
     </div>
   </div>
 </div>

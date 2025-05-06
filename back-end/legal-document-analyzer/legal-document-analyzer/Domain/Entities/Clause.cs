@@ -9,5 +9,6 @@ namespace legal_document_analyzer.Domain.Entities
         public ClauseType Type { get; set; }
         public string Text { get; set; }
         public string Explanation { get; set; } // LLM explanation
+
     }
 }

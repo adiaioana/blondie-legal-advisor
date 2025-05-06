@@ -37,16 +37,18 @@ namespace legal_document_analyzer.Infrastructure.Persistence
                 .ToListAsync();
         }
 
-        public async Task AddDocumentAsync(LegalDocument document)
+        public async Task<(IEnumerable<Clause> Clauses, DocumentSummary Summary)> AddDocumentAsync(LegalDocument document)
         {
             Console.WriteLine(document.Content.Length);
-            var slicedContent = document.Content;//.Substring(0, 1000);
+            var slicedContent = document.Content;
             var parsedClauses = await _parser.ParseClauses(slicedContent, document.LegalDocumentId);
             document.Clauses = parsedClauses.ToList();
             document.Summary = await _parser.GenerateSummary(slicedContent, document.LegalDocumentId);
 
             await _context.Set<LegalDocument>().AddAsync(document);
             await _context.SaveChangesAsync();
+
+            return (document.Clauses, document.Summary);
         }
 
         public async Task UpdateDocumentAsync(LegalDocument document)

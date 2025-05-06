@@ -5,6 +5,19 @@
   border-radius: 1rem;
   background-color: #1e1e1e;
 }
+.field.styled-text {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  max-height: 500px;
+}
+.loading-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+}
 
 .upload-box {
   display: inline-block;

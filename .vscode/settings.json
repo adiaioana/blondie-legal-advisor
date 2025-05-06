@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/391d75b7-5957-4661-be7f-440d25883821/resourceGroups/blondie/providers/Microsoft.Web/sites/backend-blondie",
+    "appService.deploySubpath": "back-end\\legal-document-analyzer"
+}
