@@ -28,7 +28,14 @@ namespace legal_document_analyzer.Infrastructure.Persistence
                 .Include(d => d.Summary)
                 .FirstOrDefaultAsync(d => d.LegalDocumentId == documentId);
         }
-
+        public async Task<IEnumerable<LegalDocument>> GetDocumentsByUserIdAsync(Guid userId)
+        {
+            return await _context.Set<LegalDocument>()
+                .Where(d => d.UserId == userId)
+                .Include(d => d.Clauses)
+                .Include(d => d.Summary)
+                .ToListAsync();
+        }
         public async Task<IEnumerable<LegalDocument>> GetAllDocumentsAsync()
         {
             return await _context.Set<LegalDocument>()

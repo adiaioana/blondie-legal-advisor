@@ -9,5 +9,6 @@ namespace legal_document_analyzer.Domain.Repositories
         Task<(IEnumerable<Clause> Clauses, DocumentSummary Summary)> AddDocumentAsync(LegalDocument document);
         Task UpdateDocumentAsync(LegalDocument document);
         Task DeleteDocumentAsync(Guid documentId);
+        Task<IEnumerable<LegalDocument>> GetDocumentsByUserIdAsync(Guid userId);
     }
 }

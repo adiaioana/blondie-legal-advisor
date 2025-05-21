@@ -38,9 +38,10 @@ export class LoginPageComponent {
       },
       (error) => {
         // Handle errors like username already exists or other errors from the backend
-        if (error.status === 403 ) {
+        if (error.status === 403 || error.status === 401) {
           this.errorMessage = 'Username or password not right.';
-        } else {
+        }
+        else {
           this.errorMessage = error.error || 'Log in failed. Please try again.';
         }
         console.error('Error during registration:', error);

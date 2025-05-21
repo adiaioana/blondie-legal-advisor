@@ -1,0 +1,22 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="error" style="color: red">Error: {{ error }}</div>
+<div *ngIf="!isLoading && !error">
+  <div *ngIf="documents.length === 0">No documents found.</div>
+  <div class="documents-grid">
+    <div *ngFor="let doc of documents" class="document-card">
+      <h3>{{ doc.fileName }}</h3>
+      <p>{{ doc.uploadedAt | date:'medium' }}</p>
+      <ng-container *ngIf="doc.summary !== undefined &&  doc.summary?.content !== undefined && doc.summary?.content !== null; else loadingTemplate">
+        <p class="summary-preview">
+          {{ getSummaryPreview(doc.summary.content, 200) }}
+        </p>
+      </ng-container>
+      <ng-template #loadingTemplate>
+        <p class="summary-preview" style="font-style: italic; color: #b39ddb;">
+          Loading analysis...
+        </p>
+      </ng-template>
+      <button class="view-analysis-btn" (click)="goToDetail(doc.legalDocumentId, $event)">View Analysis</button>
+    </div>
+  </div>
+</div>

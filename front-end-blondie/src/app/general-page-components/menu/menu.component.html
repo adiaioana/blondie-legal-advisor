@@ -21,7 +21,7 @@
         </a>
       </li>
 
-      <li *ngIf="isLoggedIn">
+      <li *ngIf="isLoggedIn"  (click)="router.navigate(['/documents'])">
         <i class="icon">📁</i>
         <span *ngIf="isExpanded">my folders</span>
       </li>

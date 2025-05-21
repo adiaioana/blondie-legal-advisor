@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\presentation\\controllers\\legaldocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\domain\\entities\\clause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\domain\\entities\\clause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\infrastructure\\persistence\\legaldocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\infrastructure\\persistence\\legaldocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\domain\\repositories\\ilegaldocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\domain\\repositories\\ilegaldocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\infrastructure\\persistence\\documentsummaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\infrastructure\\persistence\\documentsummaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\domain\\entities\\legaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\domain\\entities\\legaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\domain\\entities\\clause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\domain\\entities\\clause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\domain\\entities\\legaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|solutionrelative:legal-document-analyzer\\domain\\entities\\legaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC6D90B5-0503-48E5-9CD8-5919AEA1F0E2}|legal-document-analyzer\\legal-document-analyzer.csproj|d:\\fii\\dotnet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\application\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -128,40 +124,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Clause.cs",
-              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\Clause.cs",
-              "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\Entities\\Clause.cs",
-              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\Clause.cs",
-              "RelativeToolTip": "legal-document-analyzer\\Domain\\Entities\\Clause.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T21:50:33.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ILegalDocumentRepository.cs",
-              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Repositories\\ILegalDocumentRepository.cs",
-              "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\Repositories\\ILegalDocumentRepository.cs",
-              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Repositories\\ILegalDocumentRepository.cs",
-              "RelativeToolTip": "legal-document-analyzer\\Domain\\Repositories\\ILegalDocumentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T21:38:51.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "LegalDocumentRepository.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Infrastructure\\Persistence\\LegalDocumentRepository.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Infrastructure\\Persistence\\LegalDocumentRepository.cs",
               "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Infrastructure\\Persistence\\LegalDocumentRepository.cs",
               "RelativeToolTip": "legal-document-analyzer\\Infrastructure\\Persistence\\LegalDocumentRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwDIAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T20:15:35.702Z",
+              "WhenOpened": "2025-05-21T15:22:29.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LegalDocument.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
+              "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
+              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
+              "RelativeToolTip": "legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:49:49.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:32:43.694Z",
               "EditorCaption": ""
             },
             {
@@ -172,9 +168,26 @@
               "RelativeDocumentMoniker": "legal-document-analyzer\\Presentation\\Controllers\\LegalDocumentsController.cs",
               "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Presentation\\Controllers\\LegalDocumentsController.cs",
               "RelativeToolTip": "legal-document-analyzer\\Presentation\\Controllers\\LegalDocumentsController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAA5wGQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T15:53:31.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Infrastructure\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "legal-document-analyzer\\Infrastructure\\Services\\TokenService.cs",
+              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Infrastructure\\Services\\TokenService.cs",
+              "RelativeToolTip": "legal-document-analyzer\\Infrastructure\\Services\\TokenService.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAswGEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T05:33:45.068Z",
               "EditorCaption": ""
             },
             {
@@ -187,34 +200,19 @@
               "RelativeToolTip": "legal-document-analyzer\\Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwCwAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T14:24:57.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T14:24:57.556Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "legal-document-analyzer\\Presentation\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Title": "Clause.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\Clause.cs",
+              "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\Entities\\Clause.cs",
+              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\Clause.cs",
+              "RelativeToolTip": "legal-document-analyzer\\Domain\\Entities\\Clause.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T10:47:26.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DocumentSummaryRepository.cs",
-              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Infrastructure\\Persistence\\DocumentSummaryRepository.cs",
-              "RelativeDocumentMoniker": "legal-document-analyzer\\Infrastructure\\Persistence\\DocumentSummaryRepository.cs",
-              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Infrastructure\\Persistence\\DocumentSummaryRepository.cs",
-              "RelativeToolTip": "legal-document-analyzer\\Infrastructure\\Persistence\\DocumentSummaryRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T18:36:29.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T21:50:33.329Z"
             },
             {
               "$type": "Document",
@@ -243,18 +241,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "LegalDocument.cs",
-              "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
-              "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
-              "ToolTip": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
-              "RelativeToolTip": "legal-document-analyzer\\Domain\\Entities\\LegalDocument.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T10:16:25.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "UserLoginDTO.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Application\\DTOs\\UserLoginDTO.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Application\\DTOs\\UserLoginDTO.cs",
@@ -266,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "UserRegisterDTO.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Application\\DTOs\\UserRegisterDTO.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Application\\DTOs\\UserRegisterDTO.cs",
@@ -278,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "SwaggerOptions.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Properties\\Configuration\\SwaggerOptions.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Properties\\Configuration\\SwaggerOptions.cs",
@@ -290,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\Repositories\\IUserRepository.cs",
@@ -302,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "20250410125126_InitialCreate.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\sem2\\project\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Migrations\\20250410125126_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\sem2\\project\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Migrations\\20250410125126_InitialCreate.cs",
@@ -314,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "TokenRequest.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\ValueObjects\\TokenRequest.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\ValueObjects\\TokenRequest.cs",
@@ -326,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "ClauseType.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\proiect-blondie\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\ValueObjects\\ClauseType.cs",
               "RelativeDocumentMoniker": "legal-document-analyzer\\Domain\\ValueObjects\\ClauseType.cs",

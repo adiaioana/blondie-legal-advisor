@@ -1,0 +1,31 @@
+<div *ngIf="isLoading" class="text-center my-4">
+  Loading...
+</div>
+
+<div *ngIf="!isLoading && document" class="document-details">
+
+  <!-- Go Back Button -->
+  <div class="text-center mb-4">
+    <button (click)="goBack()" class="view-analysis-btn">Go Back</button>
+  </div>
+
+  <hr />
+  <div class="section">
+    <h3>Document Name</h3>
+    <h2>{{ document.fileName }}</h2>
+  </div>
+
+  <hr />
+  <div class="section">
+    <h3>Summary</h3>
+    <div [innerHTML]="convertMarkdownToHtml(document.summary?.content || '')"></div>
+  </div>
+
+  <hr />
+  <div class="section">
+    <h3>Clauses</h3>
+    <div *ngFor="let clause of document.clauses" class="clause">
+      <div [innerHTML]="convertMarkdownToHtml(clause.text)"></div>
+    </div>
+  </div>
+</div>

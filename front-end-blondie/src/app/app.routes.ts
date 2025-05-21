@@ -5,6 +5,8 @@ import {RegisterPageComponent} from './pages/login-register-pages/register-page/
 import {LoginPageComponent} from './pages/login-register-pages/login-page/login-page.component';
 import {MyAccountPageComponent} from './pages/my-account-page/my-account-page.component';
 import {AuthGuard} from './services/auth-service/auth-guard';
+import {DocumentsGridComponent} from './pages/documents-grid/documents-grid.component';
+import {DocumentDetailComponent} from './pages/document-detail/document-detail.component';
 
 export const routes: Routes = [
 
@@ -14,5 +16,7 @@ export const routes: Routes = [
   {path:'register', component: RegisterPageComponent},
   {path:'login', component: LoginPageComponent},
   {path: 'my-account', component: MyAccountPageComponent,
-    canActivate: [AuthGuard]}
+    canActivate: [AuthGuard]},
+  { path: 'documents', component: DocumentsGridComponent,canActivate: [AuthGuard] },
+  { path: 'documents/:id', component: DocumentDetailComponent, canActivate: [AuthGuard] }
 ];

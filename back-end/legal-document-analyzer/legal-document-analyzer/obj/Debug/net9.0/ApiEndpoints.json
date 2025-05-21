@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "legal_document_analyzer.Presentation.Controllers.LegalDocumentsController",
+    "Method": "GetAllDocuments",
+    "RelativePath": "api/LegalDocuments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.LegalDocumentsController",
+    "Method": "GetDocument",
+    "RelativePath": "api/LegalDocuments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.LegalDocumentsController",
     "Method": "UploadDocument",
     "RelativePath": "api/LegalDocuments/upload",
     "HttpMethod": "POST",

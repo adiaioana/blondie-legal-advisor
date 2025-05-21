@@ -130,6 +130,40 @@
         }
       }
     },
+    "/api/LegalDocuments": {
+      "get": {
+        "tags": [
+          "LegalDocuments"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LegalDocuments/{id}": {
+      "get": {
+        "tags": [
+          "LegalDocuments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LegalDocuments/upload": {
       "post": {
         "tags": [
