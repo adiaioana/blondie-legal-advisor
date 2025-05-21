@@ -7,6 +7,7 @@ import {MyAccountPageComponent} from './pages/my-account-page/my-account-page.co
 import {AuthGuard} from './services/auth-service/auth-guard';
 import {DocumentsGridComponent} from './pages/documents-grid/documents-grid.component';
 import {DocumentDetailComponent} from './pages/document-detail/document-detail.component';
+import {ChatComponent} from './pages/chat/chat.component';
 
 export const routes: Routes = [
 
@@ -18,5 +19,6 @@ export const routes: Routes = [
   {path: 'my-account', component: MyAccountPageComponent,
     canActivate: [AuthGuard]},
   { path: 'documents', component: DocumentsGridComponent,canActivate: [AuthGuard] },
-  { path: 'documents/:id', component: DocumentDetailComponent, canActivate: [AuthGuard] }
+  { path: 'documents/:id', component: DocumentDetailComponent, canActivate: [AuthGuard] },
+  {path:'chat', component:ChatComponent}
 ];
