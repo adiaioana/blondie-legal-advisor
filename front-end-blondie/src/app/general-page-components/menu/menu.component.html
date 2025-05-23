@@ -26,7 +26,7 @@
         <span *ngIf="isExpanded">my folders</span>
       </li>
 
-      <li (click)="router.navigate(['/chat'])">
+      <li *ngIf="isLoggedIn"  (click)="router.navigate(['/chat'])">
         <i class="icon">🤖</i>
         <span *ngIf="isExpanded">AI legal chatbot</span>
       </li>

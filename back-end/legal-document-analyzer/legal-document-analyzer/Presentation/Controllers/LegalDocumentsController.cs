@@ -28,37 +28,6 @@ namespace legal_document_analyzer.Presentation.Controllers
             _repository = repository;
         }
 
-        private string DecodeToken(TokenRequest tokenRequest)
-        {
-
-            if (tokenRequest == null || string.IsNullOrEmpty(tokenRequest.RefreshToken))
-            {
-                return "Invalid token";
-            }
-
-            var token = Request.GetBearerToken();
-
-            if (string.IsNullOrEmpty(token))
-            {
-                return "Invalid token";
-            }
-
-
-            var principal = _tokenService.GetPrincipalFromExpiredToken(token);
-            if (principal == null)
-            {
-                return "Invalid token";
-            }
-            var userIdClaim = principal.FindFirst(ClaimTypes.NameIdentifier);
-            if (userIdClaim == null)
-            {
-                return "User ID claim not found in token";
-            }
-            var userId =userIdClaim.Value.ToString();
-            return userId;
-
-
-        }
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllDocuments()

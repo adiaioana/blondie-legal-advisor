@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {map, Observable} from 'rxjs';
 import { LegalDocument } from '../../models/legal-document.model';
 import {environment} from '../../envinronment';
 
@@ -11,7 +11,9 @@ export class DocumentsService {
   constructor(private http: HttpClient) {}
 
   getDocuments(): Observable<LegalDocument[]> {
-    return this.http.get<LegalDocument[]>(this.apiUrl);
+    return this.http.get<{ $id: string; $values: LegalDocument[] }>(this.apiUrl).pipe(
+      map(response => response.$values) // Extract the `values` array
+    );
   }
 
   getDocumentById(id: string): Observable<LegalDocument> {

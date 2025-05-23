@@ -14,6 +14,8 @@ namespace legal_document_analyzer.Infrastructure
         public DbSet<LegalDocument> LegalDocuments { get; set; }
         public DbSet<Clause> Clauses { get; set; }
         public DbSet<DocumentSummary> DocumentSummaries { get; set; }
+        public DbSet<ChatSession> ChatSessions {get; set;}
+        public DbSet<MyChatMessage> ChatMessages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -72,6 +74,45 @@ namespace legal_document_analyzer.Infrastructure
                 entity.Property(e => e.DocumentId).HasColumnName("documentid");
                 entity.Property(e => e.Style).HasColumnName("style");
                 entity.Property(e => e.Content).HasColumnName("content");
+            });
+
+            modelBuilder.Entity<ChatSession>(entity =>
+            {
+                // Table Name
+                entity.ToTable("chatsessions");
+
+                // Primary Key
+                entity.HasKey(e => e.Id);
+
+                // Property Mappings
+                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.UserId).HasColumnName("userid");
+                entity.Property(e => e.CreatedAt).HasColumnName("createdat");
+                entity.Property(e => e.IsActive).HasColumnName("isactive");
+
+                // Relationships
+                entity.HasMany(e => e.Messages)
+                      .WithOne(cm => cm.ChatSession)
+                      .HasForeignKey(cm => cm.ChatSessionId);
+            });
+
+            // ChatMessage Configuration
+            modelBuilder.Entity<MyChatMessage>(entity =>
+            {
+                entity.ToTable("chatmessages");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.ChatSessionId).HasColumnName("chatsessionid");
+                entity.Property(e => e.Sender).HasColumnName("sender");
+                entity.Property(e => e.Content).HasColumnName("content");
+                entity.Property(e => e.InputMode).HasColumnName("inputmode");
+                entity.Property(e => e.Timestamp).HasColumnName("timestamp");
+
+                entity.HasOne(cm => cm.ChatSession)
+                      .WithMany(cs => cs.Messages)
+                      .HasForeignKey(cm => cm.ChatSessionId);
             });
         }
     }

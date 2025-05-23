@@ -19,12 +19,19 @@ var swaggerOptions = new SwaggerOptions();
 builder.Configuration.GetSection("Swagger").Bind(swaggerOptions);
 
 // Add services
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+    });
 builder.Services.AddScoped<ILegalDocumentRepository, LegalDocumentRepository>();
 builder.Services.AddScoped<IClauseRepository, ClauseRepository>();
 builder.Services.AddScoped<IDocumentSummaryRepository, DocumentSummaryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IChatRepository, ChatRepository>();
+builder.Services.AddScoped<IAzureOpenAiService, AzureOpenAiService>();
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<ILegalDocumentParser>(provider =>
     new LegalDocumentParser(
@@ -33,16 +40,12 @@ builder.Services.AddSingleton<ILegalDocumentParser>(provider =>
    builder.Configuration.GetValue<string>("DeepSeekR1Model:ApiKey"),
    builder.Configuration.GetValue<string>("DeepSeekR1Model:Model")*/
 
-     builder.Configuration.GetValue<string>("OpenAI4oMiniModel:Endpoint"),
+     builder.Configuration.GetValue<string>("OpenAI4oMiniModel:Enpoint1"),
      builder.Configuration.GetValue<string>("OpenAI4oMiniModel:ApiKey"),
      builder.Configuration.GetValue<string>("OpenAI4oMiniModel:Model"),
      builder.Configuration.GetValue<int>("OpenAI4oMiniModel:Max_Tokens")
 ));
 
-Console.WriteLine(builder.Configuration.GetValue<string>("OpenAI4oMiniModel:Endpoint"));
-Console.WriteLine(builder.Configuration.GetValue<string>("OpenAI4oMiniModel:ApiKey"));
-Console.WriteLine(builder.Configuration.GetValue<string>("OpenAI4oMiniModel:Model"));
-Console.WriteLine(builder.Configuration.GetValue<int>("OpenAI4oMiniModel:Max_Tokens"));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(options =>
 {

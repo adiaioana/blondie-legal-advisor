@@ -39,7 +39,7 @@ export class DocumentAnalyzerPageComponent {
           //console.log('Full response:', response);
           const legalDocumentId = response.legalDocumentId;
           const fileName = response.fileName;
-          this.clauses = this.convertMarkdownToHtml(response.clauseContents?.join('\n\n') || '');
+          this.clauses = this.convertMarkdownToHtml(response.clauseContents.$values?.join('\n\n') || '');
           this.summary = this.convertMarkdownToHtml(response.content || '');
 
 

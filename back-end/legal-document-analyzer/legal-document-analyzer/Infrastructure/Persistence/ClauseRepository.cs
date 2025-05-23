@@ -1,7 +1,6 @@
 ﻿using legal_document_analyzer.Domain.Entities;
 using legal_document_analyzer.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Concurrent;
 
 namespace legal_document_analyzer.Infrastructure.Persistence
 {

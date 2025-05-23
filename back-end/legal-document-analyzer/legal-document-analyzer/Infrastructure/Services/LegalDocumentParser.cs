@@ -1,13 +1,6 @@
 using Azure;
-using Azure.AI.TextAnalytics;
 using legal_document_analyzer.Domain.Entities;
 using legal_document_analyzer.Domain.ValueObjects;
-using Microsoft.EntityFrameworkCore.Query;
-using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata;
-using Microsoft.Extensions.AI;
-using System.Net;
 using Azure.AI.Inference;
 using System.Text.RegularExpressions;
 

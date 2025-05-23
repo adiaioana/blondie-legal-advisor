@@ -24,7 +24,7 @@
   <hr />
   <div class="section">
     <h3>Clauses</h3>
-    <div *ngFor="let clause of document.clauses" class="clause">
+    <div *ngFor="let clause of document.clauses?.$values" class="clause">
       <div [innerHTML]="convertMarkdownToHtml(clause.text)"></div>
     </div>
   </div>

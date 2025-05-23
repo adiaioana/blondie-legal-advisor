@@ -1,15 +1,30 @@
 <div class="chat-container">
 
-  <!-- Chat messages -->
+  <!-- Chat messages area with scroll reference -->
   <div class="messages" #scrollContainer>
-    <div *ngFor="let message of messages" [ngClass]="{'user': message.sender === 'user', 'assistant': message.sender === 'assistant'}" class="message">
+    <div *ngFor="let message of messages"
+         [ngClass]="{'user': message.sender === 'user', 'assistant': message.sender === 'assistant'}"
+         class="message">
       {{ message.text }}
     </div>
   </div>
 
   <!-- Input area -->
   <div class="input-area">
-    <input type="text" [(ngModel)]="userInput" placeholder="Type your message..." (keydown.enter)="sendMessage()" />
-    <button (click)="sendMessage()">Send</button>
+
+    <!-- Clear Chat Button -->
+    <button class="clear-btn" (click)="clearChat()">❌</button>
+
+    <input type="file" hidden #fileInput (change)="onFileSelected($event)" />
+    <button class="upload-btn" (click)="fileInput.click()">📎</button>
+
+    <button class="mic-btn" (click)="toggleRecording()">🎤</button>
+
+    <input type="text"
+           [(ngModel)]="userInput"
+           placeholder="Type your message..."
+           (keydown.enter)="sendMessage()" />
+
+    <button class="send-btn" (click)="sendMessage()">➤</button>
   </div>
 </div>

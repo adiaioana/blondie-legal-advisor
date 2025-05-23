@@ -49,6 +49,8 @@
 
 .field-container {
   width: 45%;
+  padding-right: 1rem;
+  padding-left: 1rem;
   text-align: center;
 }
 

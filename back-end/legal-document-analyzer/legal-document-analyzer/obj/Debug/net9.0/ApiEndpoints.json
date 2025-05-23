@@ -1,5 +1,41 @@
 [
   {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/chat/message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "legal_document_analyzer.Application.DTOs.ChatMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.ChatController",
+    "Method": "GetMessages",
+    "RelativePath": "api/chat/messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "legal_document_analyzer.Presentation.Controllers.ChatController",
+    "Method": "ResetChat",
+    "RelativePath": "api/chat/reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "legal_document_analyzer.Presentation.Controllers.LegalDocumentsController",
     "Method": "GetAllDocuments",
     "RelativePath": "api/LegalDocuments",

@@ -36,6 +36,23 @@
           }
         }
       },
+      "Azure.AI.OpenAI/1.0.0-beta.5": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.30.0",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.AI.OpenAI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.OpenAI.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.AI.TextAnalytics/5.3.0": {
         "type": "package",
         "dependencies": {
@@ -1526,6 +1543,22 @@
         "lib/net8.0/Azure.AI.Inference.xml",
         "lib/netstandard2.0/Azure.AI.Inference.dll",
         "lib/netstandard2.0/Azure.AI.Inference.xml"
+      ]
+    },
+    "Azure.AI.OpenAI/1.0.0-beta.5": {
+      "sha512": "wlCf4D6iutnXQXVgNMT9SuO6gFH5e6JHb3yCK4ZF6lL+VtTrTspluqZfySE/C3KK5j2Cqdu6PbsUnZfsu/PPOQ==",
+      "type": "package",
+      "path": "azure.ai.openai/1.0.0-beta.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.ai.openai.1.0.0-beta.5.nupkg.sha512",
+        "azure.ai.openai.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.AI.OpenAI.dll",
+        "lib/netstandard2.0/Azure.AI.OpenAI.xml"
       ]
     },
     "Azure.AI.TextAnalytics/5.3.0": {
@@ -4390,6 +4423,7 @@
     "net9.0": [
       "Azure.AI.FormRecognizer >= 4.1.0",
       "Azure.AI.Inference >= 1.0.0-beta.4",
+      "Azure.AI.OpenAI >= 1.0.0-beta.5",
       "Azure.AI.TextAnalytics >= 5.3.0",
       "Azure.Core >= 1.45.0",
       "Azure.Identity >= 1.13.2",
@@ -4459,6 +4493,10 @@
           "Azure.AI.Inference": {
             "target": "Package",
             "version": "[1.0.0-beta.4, )"
+          },
+          "Azure.AI.OpenAI": {
+            "target": "Package",
+            "version": "[1.0.0-beta.5, )"
           },
           "Azure.AI.TextAnalytics": {
             "target": "Package",
