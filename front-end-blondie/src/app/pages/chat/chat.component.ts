@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 import {environment} from '../../envinronment';
+import { SpeechToTextService } from '../../services/speech-to-text-service/speech-to-text.service';
 
 
 interface ChatMessage {
@@ -33,33 +34,13 @@ export class ChatComponent implements AfterViewChecked, OnInit {
   messages: ChatMessage[] = []; // Updated to use the ChatMessage interface
   userInput: string = '';
   isRecording: boolean = false;
-  recognition: any;
 
   @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
 
-  constructor(private http: HttpClient) {
-    const SpeechRecognition = (window as any)['SpeechRecognition'] || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      this.recognition = new SpeechRecognition();
-      this.recognition.lang = 'en-US';
-      this.recognition.continuous = false;
-      this.recognition.interimResults = false;
-
-      this.recognition.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        this.userInput += transcript + ' ';
-      };
-
-      this.recognition.onerror = (event: any) => {
-        console.error('Speech recognition error:', event);
-        this.isRecording = false;
-      };
-
-      this.recognition.onend = () => {
-        this.isRecording = false;
-      };
-    }
-  }
+  constructor(
+    private http: HttpClient,
+    private speechToTextService: SpeechToTextService
+  ) {}
 
   ngOnInit() {
     this.loadMessages();
@@ -139,18 +120,16 @@ export class ChatComponent implements AfterViewChecked, OnInit {
   }
 
   toggleRecording(): void {
-    if (!this.recognition) {
-      alert('Speech recognition is not supported in this browser.');
-      return;
-    }
-
     if (this.isRecording) {
-      this.recognition.stop();
+      this.isRecording = false;
+      // No explicit stop needed, as the service stops automatically after result
     } else {
-      this.recognition.start();
+      this.isRecording = true;
+      this.speechToTextService.startListening((transcript: string) => {
+        this.userInput += transcript + ' ';
+        this.isRecording = false;
+      });
     }
-
-    this.isRecording = !this.isRecording;
   }
 
   ngAfterViewChecked() {
