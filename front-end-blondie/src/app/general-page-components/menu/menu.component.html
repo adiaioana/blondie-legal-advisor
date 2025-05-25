@@ -37,6 +37,12 @@
       </li>
     </ul>
 
+    <!-- Profile button, only if logged in -->
+    <div *ngIf="isLoggedIn" class="sign-out" (click)="router.navigate(['/my-account'])">
+      <i class="icon">👤</i>
+      <span *ngIf="isExpanded">profile</span>
+    </div>
+
     <!-- Show sign out only if logged in -->
     <div *ngIf="isLoggedIn" class="sign-out" (click)="logout()">
       <i class="icon">❌</i>
