@@ -13,6 +13,7 @@ import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 import {environment} from '../../envinronment';
 import { SpeechToTextService } from '../../services/speech-to-text-service/speech-to-text.service';
+import { TextToSpeechServiceService, ConversationPair } from '../../services/text-to-speech-service/text-to-speech-service.service';
 
 
 interface ChatMessage {
@@ -34,12 +35,14 @@ export class ChatComponent implements AfterViewChecked, OnInit {
   messages: ChatMessage[] = []; // Updated to use the ChatMessage interface
   userInput: string = '';
   isRecording: boolean = false;
+  lastAssistantMessage: string = '';
 
   @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
 
   constructor(
     private http: HttpClient,
-    private speechToTextService: SpeechToTextService
+    private speechToTextService: SpeechToTextService,
+    private ttsService: TextToSpeechServiceService
   ) {}
 
   ngOnInit() {
@@ -87,9 +90,23 @@ export class ChatComponent implements AfterViewChecked, OnInit {
           timestamp: new Date().toISOString()
         };
         this.messages.push(assistantMessage);
+        this.lastAssistantMessage = response.reply;
         this.scrollToBottom();
       });
   }
+
+  speakAnswer() {
+    // Build conversation history as a list of ConversationPair
+    const conversation: ConversationPair[] = [];
+    for (let i = 0; i < this.messages.length; i += 2) {
+      const question = this.messages[i]?.text || '';
+      const answer = this.messages[i + 1]?.text || '';
+      conversation.push({ Question: question, Answer: answer });
+    }
+    const conversationRequest = { Conversation: conversation };
+    this.ttsService.speakSecurely(conversationRequest);
+  }
+
   clearChat() {
     const confirmation = confirm('Are you sure you want to erase all chat history and start over?');
     if (confirmation) {

@@ -19,7 +19,7 @@
     <button class="upload-btn" (click)="fileInput.click()">📎</button>
 
     <button class="mic-btn" (click)="toggleRecording()">🎤</button>
-
+    <button class="tts-btn" (click)="speakAnswer()" [disabled]="!lastAssistantMessage">🔊</button>
     <input type="text"
            [(ngModel)]="userInput"
            placeholder="Type your message..."

@@ -1,6 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
 
-
 interface ISpeechRecognition extends EventTarget {
   lang: string;
   interimResults: boolean;
