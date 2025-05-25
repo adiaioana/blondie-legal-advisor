@@ -27,7 +27,6 @@ export class AuthService {
   }
 
 
-
   login(username: string, password: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.baseUrl}/login`, { username, password }, { withCredentials: true }).pipe(
       tap(response => {
@@ -48,5 +47,13 @@ export class AuthService {
 
   private setToken(token: string) {
     localStorage.setItem(this.jwtTokenKey, token);
+  }
+
+  getCurrentUser(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/user/current`);
+  }
+
+  updateUserProfile(userData: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/user/update`, userData);
   }
 }

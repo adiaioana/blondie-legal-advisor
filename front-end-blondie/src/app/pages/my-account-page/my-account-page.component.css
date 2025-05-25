@@ -1,0 +1,163 @@
+.account-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+.profile-card {
+  display: flex;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove these profile-image rules */
+/*.profile-image {
+  flex: 0 0 150px;
+  margin-right: 30px;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #ff4081;
+}*/
+
+.profile-details {
+  flex: 1;
+}
+
+.view-mode h2 {
+  color: #ff4081;
+  margin-top: 0;
+}
+
+.view-mode p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.view-mode span {
+  font-weight: bold;
+  color: #ff4081;
+  margin-right: 10px;
+}
+
+.edit-mode {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.edit-mode .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-mode .save-button {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-mode label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff4081;
+}
+
+.edit-mode input,
+.edit-mode textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #f0f0f0;
+  font-family: 'Lexend', sans-serif;
+}
+
+.edit-mode textarea {
+  min-height: 80px;
+}
+
+.account-section {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.account-section h3 {
+  color: #ff4081;
+  margin-top: 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.preference-option {
+  margin: 15px 0;
+}
+
+.action-button, .save-button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover, .save-button:hover {
+  background-color: #f50057;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #ff4081;
+  border: 1px solid #ff4081;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Lexend', sans-serif;
+  transition: all 0.3s;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 64, 129, 0.1);
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 20px;
+  color: #ff4081;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 4px solid #ff0000;
+  color: #ff0000;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}

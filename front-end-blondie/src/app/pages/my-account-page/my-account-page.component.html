@@ -1,2 +1,85 @@
-<h1>{{username}}</h1>
-<h2>{{email}}</h2>
+<div class="account-container">
+  <div class="account-header">
+    <h1>My Account</h1>
+    <button (click)="toggleEdit()" [disabled]="loading" class="action-button">
+      {{ isEditing ? 'Cancel' : 'Edit Profile' }}
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading-spinner">
+    Loading user data...
+  </div>
+
+  <div *ngIf="!loading" class="profile-card">
+    <div class="profile-details">
+      <!-- View Mode -->
+      <div *ngIf="!isEditing" class="view-mode">
+        <h2>Hello, {{ userData.username }}</h2>
+        <p><span>Username:</span>{{ userData.username }}</p>
+        <p><span>Email:</span> {{ userData.email }}</p>
+        <p><span>Full Name:</span> {{ userData.firstName }} {{ userData.lastName }}</p>
+        <p><span>Phone:</span> {{ userData.phoneNumber }}</p>
+        <p><span>Address:</span> {{ userData.address }}</p>
+        <p><span>Birth Date:</span> {{ userData.birthdate }}</p>
+        <p><span>Member Since:</span> {{ userData.memberSince }}</p>
+      </div>
+
+      <!-- Edit Mode -->
+      <div *ngIf="isEditing" class="edit-mode">
+        <div *ngIf="saveError" class="error-message">{{ saveError }}</div>
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" [(ngModel)]="userData.username">
+        </div>
+
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" [(ngModel)]="userData.firstName">
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" [(ngModel)]="userData.lastName">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="userData.email">
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="userData.phoneNumber">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" [(ngModel)]="userData.address"></textarea>
+        </div>
+
+        <button (click)="saveChanges()" class="save-button">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="account-section">
+    <h3>Security Settings</h3>
+    <button class="secondary-button">Change Password</button>
+    <button class="secondary-button">Two-Factor Authentication</button>
+  </div>
+
+  <div class="account-section">
+    <h3>Preferences</h3>
+    <div class="preference-option">
+      <label>
+        <input type="checkbox" checked> Email Notifications
+      </label>
+    </div>
+    <div class="preference-option">
+      <label>
+        <input type="checkbox"> Newsletter Subscription
+      </label>
+    </div>
+  </div>
+</div>
