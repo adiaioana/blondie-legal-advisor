@@ -1,10 +1,11 @@
-﻿
-using legal_document_analyzer.Application.DTOs;
+﻿using legal_document_analyzer.Application.DTOs;
 using legal_document_analyzer.Domain.Repositories;
 using legal_document_analyzer.Domain.ValueObjects;
 using legal_document_analyzer.Infrastructure.Extensions;
 using legal_document_analyzer.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace legal_document_analyzer.Presentation.Controllers
 {
@@ -123,6 +124,102 @@ namespace legal_document_analyzer.Presentation.Controllers
             {
                 token = newJwtToken,
                 refreshToken = newRefreshToken
+            });
+        }
+
+        [HttpGet("user")]
+        [Authorize] // Ensures only authenticated users can access
+        public async Task<IActionResult> GetUserInfo()
+        {
+            // Get the username from the authenticated user's claims
+            var username = User.Identity.Name;
+
+            if (string.IsNullOrEmpty(username))
+                return Unauthorized("User not authenticated");
+
+            var user = await _userRepository.GetUserByUsername(username);
+            if (user == null)
+                return NotFound("User not found");
+
+            // Return user info without sensitive data
+            return Ok(new
+            {
+                userId = user.UserId,
+                username = user.Username,
+                email = user.Email
+            });
+        }
+
+        [Authorize]
+        [HttpGet("user/current")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId) || !Guid.TryParse(userId, out var userGuid))
+            {
+                return Unauthorized("Invalid user identity");
+            }
+
+            var user = await _userRepository.GetUserById(userGuid);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            // Returnează informațiile despre utilizator, excluzând datele sensibile
+            return Ok(new
+            {
+                userId = user.UserId,
+                username = user.Username,
+                email = user.Email,
+                //firstName = user.FirstName,
+                //lastName = user.LastName,
+                //phoneNumber = user.PhoneNumber,
+                //address = user.Address,
+                //birthdate = user.Birthdate,
+                //createdAt = user.CreatedAt
+            });
+        }
+
+        [Authorize]
+        [HttpPut("user/update")]
+        public async Task<IActionResult> UpdateUserProfile([FromBody] UserUpdateDTO model)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId) || !Guid.TryParse(userId, out var userGuid))
+            {
+                return Unauthorized("Invalid user identity");
+            }
+
+            var user = await _userRepository.GetUserById(userGuid);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            // Actualizează doar câmpurile permise
+            user.Username = model.Username ?? user.Username;
+            user.Email = model.Email ?? user.Email;
+            //user.FirstName = model.FirstName ?? user.FirstName;
+            //user.LastName = model.LastName ?? user.LastName;
+            //user.PhoneNumber = model.PhoneNumber ?? user.PhoneNumber;
+            //user.Address = model.Address ?? user.Address;
+            //user.Birthdate = model.Birthdate ?? user.Birthdate;
+
+            // Salvează modificările
+            var updatedUser = await _userRepository.UpdateUser(user);
+
+            return Ok(new
+            {
+                userId = updatedUser.UserId,
+                username = updatedUser.Username,
+                email = updatedUser.Email,
+                //firstName = updatedUser.FirstName,
+                //lastName = updatedUser.LastName,
+                //phoneNumber = updatedUser.PhoneNumber,
+                //address = updatedUser.Address,
+                //birthdate = updatedUser.Birthdate,
+                //createdAt = updatedUser.CreatedAt
             });
         }
     }

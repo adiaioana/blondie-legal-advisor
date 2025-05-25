@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\back-end",
+    "\\back-end\\legal-document-analyzer",
+    "\\back-end\\legal-document-analyzer\\legal-document-analyzer",
+    "\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Properties",
+    "\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Properties\\Configuration",
+    "\\front-end-blondie",
+    "\\front-end-blondie\\src",
+    "\\front-end-blondie\\src\\app",
+    "\\front-end-blondie\\src\\app\\pages",
+    "\\front-end-blondie\\src\\app\\pages\\my-account-page",
+    "\\front-end-blondie\\src\\app\\services",
+    "\\front-end-blondie\\src\\app\\services\\auth-service"
+  ],
+  "SelectedNode": "\\back-end\\legal-document-analyzer\\legal-document-analyzer\\Domain\\Entities\\User.cs",
+  "PreviewInSolutionExplorer": false
+}

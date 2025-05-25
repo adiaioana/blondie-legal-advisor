@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("legal-document-analyzer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13b41e0046738fd17007239c7dcc2140c6fa73fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e073f68dca7c6ddb9d0f9cfdaba4940d5b0f7ed5")]
 [assembly: System.Reflection.AssemblyProductAttribute("legal-document-analyzer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("legal-document-analyzer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
